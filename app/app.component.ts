@@ -1,25 +1,25 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { Store } from './store';
+import {Store} from './store';
+import {Todo} from "./state.model";
 
 @Component({
-  selector: 'app-root',
-  template: `
-    <div>
-      <div *ngFor="let todo of todos$ | async">
-        {{ todo.name }}
-      </div>
-    </div>
-  `
+    selector: 'app-root',
+    templateUrl: './app.component.html'
 })
 export class AppComponent {
 
-  todos$ = this.store.select<any[]>('todos');
+    public todos$ = this.store.select<Todo[]>('todos');
 
-  constructor(
-    private store: Store
-  ) {
-    this.store.set('todos', [{ id: 1, name: 'Eat dinner' }, { id: 2, name: 'Do washing' }]);
-  }
+    constructor(private store: Store) {
+
+        const todos: Todo[] =
+            [
+                {id: 1, name: 'Eat dinner'},
+                {id: 2, name: 'Do washing'}
+            ];
+
+        this.store.set('todos', todos);
+    }
 
 }
