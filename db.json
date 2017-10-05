@@ -4,7 +4,7 @@
       "id": 1,
       "artist": "Oasis",
       "track": "Half The World Away",
-      "listened": false,
+      "listened": true,
       "favourite": true
     },
     {
@@ -12,13 +12,13 @@
       "artist": "Pink Floyd",
       "track": "Wish You Were Here",
       "listened": true,
-      "favourite": false
+      "favourite": true
     },
     {
       "id": 3,
       "artist": "Blink-182",
       "track": "All The Small Things",
-      "listened": false,
+      "listened": true,
       "favourite": true
     },
     {
@@ -32,22 +32,22 @@
       "id": 5,
       "artist": "The Chainsmokers",
       "track": "Closer",
-      "listened": false,
+      "listened": true,
       "favourite": false
     },
     {
       "id": 6,
       "artist": "Sia",
       "track": "Cheap Thrills",
-      "listened": true,
-      "favourite": true
+      "listened": false,
+      "favourite": false
     },
     {
       "id": 7,
       "artist": "Birdy",
       "track": "Wild Horses",
       "listened": false,
-      "favourite": true
+      "favourite": false
     },
     {
       "id": 8,

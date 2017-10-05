@@ -4,6 +4,7 @@ export interface State {
 }
 
 export interface Playlist {
+    id: number;
     name: string;
     listened: boolean;
     favourite: boolean;
