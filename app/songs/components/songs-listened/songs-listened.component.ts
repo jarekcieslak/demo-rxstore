@@ -1,9 +1,9 @@
-import {Component, OnInit} from "@angular/core";
-import {Store} from "../../../store";
-import {SongsService} from "../../services/songs.service";
-import {Observable} from "rxjs/Observable";
+import { Component, OnInit } from "@angular/core";
+import { Store } from "../../../store";
+import { SongsService } from "../../services/songs.service";
+import { Observable } from "rxjs/Observable";
 import 'rxjs/add/operator/filter';
-import {Playlist} from "../../../state.model";
+import { Playlist } from "../../../state.model";
 
 @Component({
     selector: 'songs-listened',

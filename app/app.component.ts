@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-import {Store} from './store';
-import {Todo} from "./state.model";
+import { Store } from './store';
+import { Todo } from "./state.model";
 
 @Component({
     selector: 'app-root',
@@ -15,8 +15,8 @@ export class AppComponent {
 
         const todos: Todo[] =
             [
-                {id: 1, name: 'Eat dinner'},
-                {id: 2, name: 'Do washing'}
+                { id: 1, name: 'Eat dinner' },
+                { id: 2, name: 'Do washing' }
             ];
 
         this.store.set('todos', todos);

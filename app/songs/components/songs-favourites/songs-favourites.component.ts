@@ -1,6 +1,6 @@
-import {Component, OnInit} from "@angular/core";
-import {Store} from "../../../store";
-import {Playlist} from "../../../state.model";
+import { Component, OnInit } from "@angular/core";
+import { Store } from "../../../store";
+import { Playlist } from "../../../state.model";
 
 @Component({
     selector: 'songs-favourites',

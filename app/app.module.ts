@@ -1,8 +1,8 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {Store} from './store';
-import {AppComponent} from './app.component';
-import {SongsModule} from "./songs/songs.module";
+import { AppComponent } from "./app.component";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { Store } from './store';
+import { SongsModule } from "./songs/songs.module";
 
 @NgModule({
     declarations: [

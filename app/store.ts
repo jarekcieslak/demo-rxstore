@@ -1,7 +1,7 @@
-import {Injectable} from "@angular/core";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
-import {State} from "./state.model";
-import {Observable} from "rxjs/Observable";
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { State } from "./state.model";
+import { Observable } from "rxjs/Observable";
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/pluck';
 
@@ -38,12 +38,12 @@ export class Store {
     /**
      * Sets part of the state
      * @param {string} name
-     * @param state
+     * @param newState
      */
-    public set(name: string, state: any) {
+    public set(name: string, newState: any) {
         this.subject.next({
             ...this.value,
-            [name]: state
+            [name]: newState
         });
     }
 

@@ -1,8 +1,8 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
-import {Store} from "../../../store";
-import {SongsService} from "../../services/songs.service";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Store } from "../../../store";
+import { SongsService } from "../../services/songs.service";
 import 'rxjs/add/operator/first'
-import {Subscription} from "rxjs/Subscription";
+import { Subscription } from "rxjs/Subscription";
 
 @Component({
     selector: 'songs-playlist',
