@@ -9,12 +9,10 @@ import { Playlist } from "../../../state.model";
     selector: 'songs-listened',
     template: `
         <div class="songs">
+            <songs-list
+            [list]="(listened$ | async)" >
             Listened
-            <div *ngFor="let item of (listened$ | async)">
-                {{item.artist}}
-                {{item.track}}
-                
-            </div>
+            </songs-list>
         </div>
     `
 })
@@ -29,7 +27,7 @@ export class SongsListenedComponent implements OnInit {
 
     public ngOnInit() {
         this.listened$ = this.store.select<Playlist[]>('playlist')
-            .filter(data => !!data)
-            .map(data => data.filter(item => item.listened))
+            .filter(Boolean)
+            .map(data => data.filter(item => (item.listened === true)))
     }
 }

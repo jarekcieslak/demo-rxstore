@@ -7,12 +7,12 @@ import { Subscription } from "rxjs/Subscription";
 @Component({
     selector: 'songs-playlist',
     template: `
-        Playlist
+    
         <div class="songs">
-            <div *ngFor="let item of (playlist$ | async)">
-                {{item.artist}}
-                {{item.track}}
-            </div>
+            <songs-list
+                [list]="(playlist$ | async)" >
+            Playlist
+            </songs-list>
         </div>
     `
 })
@@ -27,7 +27,8 @@ export class SongsPlaylistComponent implements OnInit, OnDestroy {
 
     public ngOnInit() {
         this.subscription.add(
-            this.songsService.getPlaylist$.subscribe(data => data)
+            // This triggers getPlaylist
+            this.songsService.getPlaylist$.subscribe()
         );
 
         this.playlist$ = this.store.select('playlist')

@@ -6,11 +6,10 @@ import { Playlist } from "../../../state.model";
     selector: 'songs-favourites',
     template: `
         <div class="songs">
-            Favourites
-            <div *ngFor="let item of (favourites$ | async)">
-                {{item.artist}}
-                {{item.track}}
-            </div>
+            <songs-list
+            [list]="(favourites$ | async)" >
+                Favourites
+            </songs-list>
         </div>
     `
 })
@@ -25,7 +24,7 @@ export class SongsFavouritesComponent implements OnInit {
     public ngOnInit() {
 
         this.favourites$ = this.store.select<Playlist[]>('playlist')
-            .filter(data => !!data)
+            .filter(Boolean)
             .map(data => data.filter(item => item.favourite))
 
 

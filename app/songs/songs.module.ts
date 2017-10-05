@@ -6,6 +6,7 @@ import { SongsPlaylistComponent } from "./components/songs-playlist/songs-playli
 import { SongsListenedComponent } from "./components/songs-listened/songs-listened.component";
 import { CommonModule } from "@angular/common";
 import { SongsService } from "./services/songs.service";
+import { SongsListComponent } from "./components/songs-list/songs-list.component";
 
 @NgModule({
     imports: [
@@ -15,10 +16,12 @@ import { SongsService } from "./services/songs.service";
     declarations: [
         SongsFavouritesComponent,
         SongsPlaylistComponent,
-        SongsListenedComponent
+        SongsListenedComponent,
+        SongsListComponent
     ],
-    providers: [SongsService],
-
+    providers: [
+        SongsService
+    ],
     exports: [
         SongsFavouritesComponent,
         SongsPlaylistComponent,

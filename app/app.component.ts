@@ -9,17 +9,4 @@ import { Todo } from "./state.model";
 })
 export class AppComponent {
 
-    public todos$ = this.store.select<Todo[]>('todos');
-
-    constructor(private store: Store) {
-
-        const todos: Todo[] =
-            [
-                { id: 1, name: 'Eat dinner' },
-                { id: 2, name: 'Do washing' }
-            ];
-
-        this.store.set('todos', todos);
-    }
-
 }
